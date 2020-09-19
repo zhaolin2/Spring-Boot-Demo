@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.orm.mapper.ThemeDetailMapper">
+<!--    <resultMap id="systemUserMap" type="com.husy.domain.SystemUser" >-->
+<!--        <id column="user_id" property="userId"  />-->
+<!--        <result column="user_account" property="userAccount" />-->
+<!--        <result column="user_password" property="userPassword"  />-->
+<!--        <result column="user_phone" property="userPhone"  />-->
+<!--    </resultMap>-->
+    <select id="findThemeDetailById" resultType="com.orm.entity.ThemeDetail">
+         SELECT ttd.upload_date
+
+        from t_theme_detail ttd
+    </select>
+</mapper>
