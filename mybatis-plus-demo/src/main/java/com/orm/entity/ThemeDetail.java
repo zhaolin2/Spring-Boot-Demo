@@ -1,5 +1,6 @@
 package com.orm.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @Accessors(chain = true)
 @Data
 public class ThemeDetail {
-    @DateTimeFormat(pattern="HH:ss:mm")
+
+    @TableField()
     LocalDate uploadDate;
 }

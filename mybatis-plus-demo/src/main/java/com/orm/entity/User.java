@@ -3,6 +3,8 @@ package com.orm.entity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
+import com.orm.handle.TypeEntityHandler;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -86,4 +88,7 @@ public class User extends Model<User>  implements Serializable  {
      */
     @TableField(fill = INSERT_UPDATE)
     private Date lastUpdateTime;
+
+    @TableField(typeHandler = JacksonTypeHandler.class)
+    private TypeEntity entity;
 }
